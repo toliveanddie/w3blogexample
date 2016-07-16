@@ -1,0 +1,9 @@
+<%= form_for (Comment.new) do |f| %>
+  <%= f.label :"Your name" %>
+  <%= f.text_field :username %>
+
+  <%= f.label :"leave comment" %>
+  <%= f.text_area :content, size: '100x3' %><br>
+
+  <%= f.submit :Submit, :class => 'btn btn-success' %>
+<% end %>
