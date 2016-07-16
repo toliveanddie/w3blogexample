@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   root 'staticpages#home'
 
-  get 'staticpages/friends'
+  get '/friends', to: 'staticpages#friends'
 
-  get 'staticpages/family'
+  get '/family', to: 'staticpages#family'
 
-  get 'staticpages/photos'
+  get '/photos', to: 'staticpages#photos'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
