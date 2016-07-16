@@ -1,4 +1,4 @@
-W3 schools bootstrap blog example.
+w3schools.com has some bootstrap templates on their site here... http://www.w3schools.com/bootstrap/bootstrap_templates.asp
 
-this is my practice attempt at filling out the blog example that you can find on
-the W3 schools website in the bootstrap tutorial section with rails.
+This app uses the Blog template and fills out the backend with Rails.
+For the most part, it looks the same and it was fun to try and make it work like a normal website.
