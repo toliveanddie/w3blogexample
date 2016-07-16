@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   root 'staticpages#home'
 
   get '/friends', to: 'staticpages#friends'
