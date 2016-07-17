@@ -1,8 +1,12 @@
 class CommentsController < ApplicationController
 
   def create
-    @comment = Comment.create!(comment_params)
-    redirect_to root_path
+    @comment = Comment.new(comment_params)
+    if @comment.save
+      redirect_to root_path, notice: "comment saved"
+    else
+      redirect_to root_path, notice: "Your name or comment Can't be blank"
+    end
   end
 
   private

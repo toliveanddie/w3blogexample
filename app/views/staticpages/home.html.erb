@@ -1,9 +1,14 @@
 <div class="col-sm-9">
   <h4><small>The most recent post</small></h4>
   <hr>
-  <%= render @posts %>
-  <h4>Leave a Comment:</h4>
-  <hr>
+  <% @posts.each do |post| %>
+    <h2><%= post.title %></h2>
+    <h4><span class="glyphicon glyphicon-time"></span><%= post.username %>  <small><%= time_ago_in_words(post.created_at) %> ago</small></h4>
+    <h5><span class="label label-danger">Rails!</span> <span class="label label-primary">Fun!</span></h5>
+    <p class="pcontent"><%= post.content %></p>
+    <hr>
+  <% end %>
+  <h4>Leave a Comment Below:</h4>
   <%= render 'comments/new' %>
 
   <p><span class="badge"><%= Comment.count %></span> Comments:</p>

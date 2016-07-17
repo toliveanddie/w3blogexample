@@ -1,7 +1,7 @@
 <% @posts.each do |post| %>
   <h2><%= post.title %></h2>
-  <h5><span class="glyphicon glyphicon-time"></span><%= post.username %> <%= post.created_at.to_s(:long) %> ago</h5>
-  <h5><span class="label label-danger">Rails!</span> <span class="label label-primary">Fun!</span></h5><br>
-  <p><%= post.content %></p>
+  <h4><span class="glyphicon glyphicon-time"></span><%= post.username %> <%= time_ago_in_words(post.created_at) %> ago</h4>
+  <h5><span class="label label-danger">Rails!</span> <span class="label label-primary">Fun!</span></h5>
+  <p id="pcontent"><%= post.content %></p>
   <hr>
 <% end %>
