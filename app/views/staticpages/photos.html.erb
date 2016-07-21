@@ -1,1 +1,9 @@
 <h1> Photos page </h1>
+
+<% @images.each do |image| %>
+
+  <div id="pimage">
+    <%= image_tag image.avatar.url if image.avatar? %>
+    <h4><small><%= image.caption %></small></h4>
+  </div>
+<% end %>

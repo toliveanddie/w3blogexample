@@ -12,5 +12,6 @@ class StaticpagesController < ApplicationController
   end
 
   def photos
+    @images = Image.all
   end
 end
