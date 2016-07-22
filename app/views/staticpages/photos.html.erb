@@ -3,7 +3,7 @@
 <% @images.each do |image| %>
 
   <div id="pimage">
-    <%= image_tag image.avatar.url if image.avatar? %>
+    <%= image_tag image.avatar.url, :class => "pimage" %>
     <h4><small><%= image.caption %></small></h4>
   </div>
 <% end %>
